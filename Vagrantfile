@@ -51,7 +51,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       "Data/Persistent/**",
       "Data/Surf/**",
       "Data/Logs/**",
-      "Web/_Resources/**"
+      "Web/_Resources/Persistent",
+      "Web/_Resources/Static"
     ]
 
   # Install chef client
