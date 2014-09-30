@@ -6,4 +6,3 @@ cache
 data
 gems
 rgloader
-chef/cookbooks/*

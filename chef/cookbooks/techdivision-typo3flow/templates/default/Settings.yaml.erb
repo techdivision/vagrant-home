@@ -1,0 +1,19 @@
+#
+# This file is managed by Chef, any manual changes will be lost!
+#
+
+TYPO3:
+  Flow:
+    persistence:
+      backendOptions:
+        host: 'localhost'
+        dbname: '<%= @database_name %>'
+        user: '<%= @database_user %>'
+        password: '<%= @database_password %>'
+        driver: 'pdo_mysql'
+        host: '127.0.0.1'
+        charset: 'utf8'
+<% if @base_uri %>
+    http:
+      baseUri: '<%= @base_uri %>'
+<% end %>
