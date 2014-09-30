@@ -1,0 +1,24 @@
+{
+	"name": "databaseserver",
+	"default_attributes": {
+		"mysql": {
+			"client":{
+				"packages": ["build-essential","mysql-client","libmysqlclient-dev"]
+			},
+			"remove_test_database": true,
+			"remove_anonymous_users": true,
+			"tunable": {
+				"collation-server": "utf8_unicode_ci",
+				"max_connections": "150"
+			}
+		}
+	},
+	"override_attributes": { },
+	"json_class": "Chef::Role",
+	"description": "Role for a database server",
+	"chef_type": "role",
+	"run_list": [
+		"role[base]",
+		"recipe[techdivision-databaseserver]"
+	]
+}

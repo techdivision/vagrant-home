@@ -1,0 +1,13 @@
+{
+    "name": "vagrant",
+    "default_attributes": {},
+    "override_attributes": {
+      "vagrant": true
+    },
+    "json_class": "Chef::Role",
+    "description": "Base role for all nodes",
+    "chef_type": "role",
+    "run_list": [
+      "recipe[techdivision-sass::default]"
+    ]
+}

@@ -1,0 +1,201 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    7-zip (1.0.2)
+      windows (>= 1.2.2)
+    apache2 (2.0.0)
+      iptables (>= 0.0.0)
+      logrotate (>= 0.0.0)
+      pacman (>= 0.0.0)
+    apt (2.6.0)
+    ark (0.9.0)
+      7-zip (>= 0.0.0)
+      windows (>= 0.0.0)
+    aws (2.4.0)
+    bluepill (2.3.1)
+      rsyslog (>= 0.0.0)
+    build-essential (2.0.6)
+    chef-sugar (2.3.0)
+    chef_handler (1.1.6)
+    database (2.3.0)
+      aws (>= 0.0.0)
+      mysql (>= 5.0.0)
+      mysql-chef_gem (>= 0.0.0)
+      postgresql (>= 1.0.0)
+      xfs (>= 0.0.0)
+    iis (2.1.5)
+      windows (>= 1.2.6)
+    iptables (0.14.0)
+    java (1.28.0)
+    jenkins (2.1.2)
+      apt (~> 2.0)
+      runit (~> 1.5)
+      yum (~> 3.0)
+    logrotate (1.7.0)
+    mysql (5.5.2)
+      yum-mysql-community (>= 0.0.0)
+    mysql-chef_gem (0.0.4)
+      build-essential (>= 0.0.0)
+      mysql (>= 0.0.0)
+    nginx (2.7.4)
+      apt (~> 2.2)
+      bluepill (~> 2.3)
+      build-essential (~> 2.0)
+      ohai (~> 2.0)
+      runit (~> 1.2)
+      yum-epel (~> 0.3)
+    nodejs (2.1.0)
+      apt (>= 0.0.0)
+      ark (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      yum-epel (>= 0.0.0)
+    ohai (2.0.1)
+    openssl (2.0.0)
+      chef-sugar (>= 0.0.0)
+    pacman (1.1.1)
+    php (1.4.6)
+      build-essential (>= 0.0.0)
+      iis (>= 0.0.0)
+      mysql (>= 0.0.0)
+      windows (>= 0.0.0)
+      xml (>= 0.0.0)
+      yum-epel (>= 0.0.0)
+    postgresql (3.4.4)
+      apt (>= 1.9.0)
+      build-essential (>= 0.0.0)
+      openssl (>= 0.0.0)
+    rsyslog (1.12.2)
+    runit (1.5.10)
+      build-essential (>= 0.0.0)
+      yum (~> 3.0)
+      yum-epel (>= 0.0.0)
+    tomcat (0.16.2)
+      java (>= 0.0.0)
+      openssl (>= 0.0.0)
+    windows (1.34.6)
+      chef_handler (>= 0.0.0)
+    xfs (1.1.0)
+    xml (1.2.6)
+      build-essential (>= 0.0.0)
+      chef-sugar (>= 0.0.0)
+    xvfb (0.0.1)
+    yum (3.3.2)
+    yum-epel (0.5.1)
+      yum (~> 3.0)
+    yum-mysql-community (0.1.10)
+      yum (>= 3.0)
+
+GIT
+  remote: https://github.com/balbeko/chef-npm
+  ref: master
+  sha: 83d8f655b41e6d646dc3ca8a81355e96a36cde69
+  specs:
+    npm (0.1.5)
+      nodejs (>= 0.0.0)
+
+GIT
+  remote: https://github.com/bflad/chef-mysql_connector
+  ref: master
+  sha: 3d62bb1d02bce7da043420b39602a2062f2db549
+  specs:
+    mysql_connector (0.7.2)
+
+GIT
+  remote: https://github.com/edelight/chef-solo-search
+  ref: master
+  sha: 848fad1461c78fd502975f1df2e14eed12610635
+  specs:
+    chef-solo-search (0.5.1)
+
+GIT
+  remote: https://github.com/robertlemke/cookbook-php-fpm
+  ref: master
+  sha: a39ad127b095374609fdaccbca832cec6898468b
+  specs:
+    php-fpm (0.6.4)
+      apt (>= 0.0.0)
+      yum (>= 0.0.0)
+
+GIT
+  remote: https://github.com/techdivision/cookbook-techdivision-base
+  ref: master
+  sha: 0a2c88a65894590109314710acf750ddf5456cd8
+  specs:
+    techdivision-base (1.0.0)
+      chef-solo-search (>= 0.0.0)
+      techdivision-ssh (>= 0.0.0)
+
+GIT
+  remote: https://github.com/techdivision/cookbook-techdivision-databaseserver
+  ref: master
+  sha: ff37d6e6bea00ec9b3f24dc76490b53080a48b30
+  specs:
+    techdivision-databaseserver (0.1.3)
+      database (>= 0.0.0)
+
+GIT
+  remote: https://github.com/techdivision/cookbook-techdivision-locales
+  ref: master
+  sha: 148417a654d8f48ea2fc4893d94e5a6392cff736
+  specs:
+    techdivision-locales (1.0.0)
+
+GIT
+  remote: https://github.com/techdivision/cookbook-techdivision-sass
+  ref: master
+  sha: dce8ba855cac6eda366f8e1b0c5bf8114d88565d
+  specs:
+    techdivision-sass (1.0.0)
+
+GIT
+  remote: https://github.com/techdivision/cookbook-techdivision-ssh
+  ref: master
+  sha: bcf0ff6feb32c25c0050eaa0b57221759d62c055
+  specs:
+    techdivision-ssh (1.0.0)
+
+GIT
+  remote: https://github.com/techdivision/cookbook-techdivision-typo3flow
+  ref: master
+  sha: 319b62102e8a33d6dae37b59c5bffe0d00622401
+  specs:
+    techdivision-typo3flow (1.0.0)
+      database (>= 0.0.0)
+      mysql (>= 0.0.0)
+
+GIT
+  remote: https://github.com/techdivision/cookbook-techdivision-webserver
+  ref: master
+  sha: a6456a60cc9882ef61157406e267ce24b80e09fc
+  specs:
+    techdivision-webserver (1.0.0)
+      nginx (>= 0.0.0)
+      php (>= 0.0.0)
+      php-fpm (>= 0.0.0)
+      techdivision-base (>= 0.0.0)
+      techdivision-typo3flow (>= 0.0.0)
+
+DEPENDENCIES
+  apache2 (>= 0)
+  apt (>= 0)
+  chef-solo-search (>= 0)
+  database (>= 0)
+  java (>= 0)
+  jenkins (>= 0)
+  mysql (>= 0)
+  mysql_connector (>= 0)
+  nginx (>= 0)
+  npm (>= 0)
+  npm (>= 0)
+  php (>= 0)
+  php-fpm (>= 0)
+  techdivision-base (>= 0)
+  techdivision-databaseserver (>= 0)
+  techdivision-locales (>= 0)
+  techdivision-sass (>= 0)
+  techdivision-ssh (>= 0)
+  techdivision-typo3flow (>= 0)
+  techdivision-webserver (>= 0)
+  tomcat (>= 0)
+  xvfb (>= 0)
+

@@ -1,0 +1,16 @@
+{
+	"name": "webserver",
+	"default_attributes": {
+		"nginx": {
+			"default_site_enabled": false
+		}
+	},
+	"override_attributes": { },
+	"json_class": "Chef::Role",
+	"description": "Role for a web server",
+	"chef_type": "role",
+	"run_list": [
+		"role[base]",
+		"recipe[techdivision-webserver]"
+	]
+}

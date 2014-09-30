@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site "http://community.opscode.com/api/v1"
+
+cookbook "chef-solo-search", :github => "edelight/chef-solo-search"
+cookbook "npm", :github => "balbeko/chef-npm"
+cookbook "apt"
+cookbook "mysql"
+cookbook "database"
+cookbook "nginx"
+cookbook "php"
+cookbook "java"
+cookbook "tomcat"
+cookbook "jenkins"
+cookbook "npm", :github => "balbeko/chef-npm"
+cookbook "xvfb"
+
+cookbook "apache2"
+cookbook "mysql_connector", :github => "bflad/chef-mysql_connector"
+
+cookbook "php-fpm", :github => "robertlemke/cookbook-php-fpm"
+
+cookbook "techdivision-base", :github => "techdivision/cookbook-techdivision-base"
+cookbook "techdivision-databaseserver", :github => "techdivision/cookbook-techdivision-databaseserver"
+cookbook "techdivision-webserver", :github => "techdivision/cookbook-techdivision-webserver"
+cookbook "techdivision-locales", :github => "techdivision/cookbook-techdivision-locales"
+cookbook "techdivision-sass", :github => "techdivision/cookbook-techdivision-sass"
+cookbook "techdivision-ssh", :github => "techdivision/cookbook-techdivision-ssh"
+cookbook "techdivision-typo3flow", :github => "techdivision/cookbook-techdivision-typo3flow"
