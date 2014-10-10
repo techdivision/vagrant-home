@@ -20,6 +20,43 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # this allows use of our own 10.0.2.x network
     vb.customize ["modifyvm", :id, "--natnet1", "10.0.100.0/24"]
   end
+  
+    # adjust KVM/Libvirt specific settings
+  config.vm.provider :libvirt do |libvirt|
+  
+	# use vagrant-mutate https://github.com/sciurus/vagrant-mutate to mutate virtualbox to libvirt
+    # credits/original box (virtualbox): https://vagrantcloud.com/chef/boxes/debian-7.4
+    config.vm.box = "http://vagrantcloud.joergboesche.de/chef/opscode_debian-7.4_chef-provisionerless-libvirt.box"
+ 
+    # A hypervisor name to access. Different drivers can be specified, but
+	# this version of provider creates KVM machines only. Some examples of
+	# drivers are kvm (qemu hardware accelerated), qemu (qemu emulated),
+	# xen (Xen hypervisor), lxc (Linux Containers),
+	# esx (VMware ESX), vmwarews (VMware Workstation) and more. Refer to
+	# documentation for available drivers (http://libvirt.org/drivers.html).
+	libvirt.driver = "kvm"
+	
+	# Libvirt storage pool name, where box image and instance snapshots will
+    # be stored.
+    libvirt.storage_pool_name = "default"
+ 
+    # use 2GB of RAM
+    #lbvrt.memory = 2048
+    libvirt.memory = 4096
+    
+	# use 2 cpus for the vm
+	libvirt.cpus = 3
+	
+	# enable nested virtualization.
+    libvirt.nested = true
+	
+	# type of disk device to emulate
+    libvirt.disk_bus = "virtio"
+	
+	# this allows use of our own 10.0.2.x network
+    libvirt.vm.network :private_network, :ip => "10.0.100.0/24", :model_type => "virtio"
+
+  end
 
   # disable default shared folder
   config.vm.synced_folder ".", "/vagrant", disabled: true
