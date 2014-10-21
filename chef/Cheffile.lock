@@ -166,7 +166,7 @@ GIT
 GIT
   remote: https://github.com/techdivision/cookbook-techdivision-webserver
   ref: master
-  sha: 108ea82cb898b01eaf4a478746e09fa030f09751
+  sha: 42e44a8d1962081ff4f9b3c5453c846249e64a62
   specs:
     techdivision-webserver (1.0.1)
       nginx (>= 0.0.0)
