@@ -14,8 +14,8 @@ SITE
     aws (2.4.0)
     bluepill (2.3.1)
       rsyslog (>= 0.0.0)
-    build-essential (2.0.6)
-    chef-sugar (2.3.0)
+    build-essential (2.1.2)
+    chef-sugar (2.4.1)
     chef_handler (1.1.6)
     database (2.3.0)
       aws (>= 0.0.0)
@@ -32,7 +32,7 @@ SITE
       runit (~> 1.5)
       yum (~> 3.0)
     logrotate (1.7.0)
-    mysql (5.5.3)
+    mysql (5.5.4)
       yum-mysql-community (>= 0.0.0)
     mysql-chef_gem (0.0.5)
       build-essential (>= 0.0.0)
@@ -53,14 +53,14 @@ SITE
     openssl (2.0.0)
       chef-sugar (>= 0.0.0)
     pacman (1.1.1)
-    php (1.4.6)
+    php (1.5.0)
       build-essential (>= 0.0.0)
       iis (>= 0.0.0)
       mysql (>= 0.0.0)
       windows (>= 0.0.0)
       xml (>= 0.0.0)
       yum-epel (>= 0.0.0)
-    postgresql (3.4.6)
+    postgresql (3.4.10)
       apt (>= 1.9.0)
       build-essential (>= 0.0.0)
       openssl (>= 0.0.0)
@@ -79,7 +79,7 @@ SITE
       build-essential (>= 0.0.0)
       chef-sugar (>= 0.0.0)
     xvfb (0.0.1)
-    yum (3.3.2)
+    yum (3.4.0)
     yum-epel (0.5.1)
       yum (~> 3.0)
     yum-mysql-community (0.1.10)
@@ -157,18 +157,18 @@ GIT
 GIT
   remote: https://github.com/techdivision/cookbook-techdivision-typo3flow
   ref: master
-  sha: 319b62102e8a33d6dae37b59c5bffe0d00622401
+  sha: 8150000f2ee0c367c2aa73f5fef6977a5978be8e
   specs:
-    techdivision-typo3flow (1.0.0)
+    techdivision-typo3flow (1.0.1)
       database (>= 0.0.0)
       mysql (>= 0.0.0)
 
 GIT
   remote: https://github.com/techdivision/cookbook-techdivision-webserver
   ref: master
-  sha: a6456a60cc9882ef61157406e267ce24b80e09fc
+  sha: 108ea82cb898b01eaf4a478746e09fa030f09751
   specs:
-    techdivision-webserver (1.0.0)
+    techdivision-webserver (1.0.1)
       nginx (>= 0.0.0)
       php (>= 0.0.0)
       php-fpm (>= 0.0.0)

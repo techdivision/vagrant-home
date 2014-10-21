@@ -194,13 +194,15 @@ if (mem >= 256)
 
   # (4) work_mem
   #     Sets the maximum memory to be used for query workspaces.
+  mem_con_v = (mem.to_f / con).ceil
+
   work_mem =
-  { "web" => mem / con,
-    "oltp" => mem / con,
-    "dw" => mem / con / 2,
-    "mixed" => mem / con / 2,
-    "desktop" => mem / con / 6
-  }.fetch(db_type)
+    { "web" => mem_con_v,
+      "oltp" => mem_con_v,
+      "dw" => mem_con_v / 2,
+      "mixed" => mem_con_v / 2,
+      "desktop" => mem_con_v / 6
+    }.fetch(db_type)
 
   node.default['postgresql']['config']['work_mem'] = binaryround(work_mem*1024*1024)
 
