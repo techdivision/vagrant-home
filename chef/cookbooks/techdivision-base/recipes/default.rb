@@ -87,8 +87,8 @@ template "zshrc.erb" do
   cookbook "techdivision-base"
   path "/root/.zshrc"
   source "zshrc.erb"
-  owner "vagrant"
-  group "vagrant"
+  owner "root"
+  group "root"
   mode "0644"
 end
 

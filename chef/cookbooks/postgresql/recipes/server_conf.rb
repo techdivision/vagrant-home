@@ -1,9 +1,6 @@
 #
-# Author:: Marius Ducea (marius@promethost.com)
-# Cookbook Name:: nodejs
-# Recipe:: default
-#
-# Copyright 2010-2012, Promet Solutions
+# Cookbook Name:: postgresql
+# Recipe:: server
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,16 +15,20 @@
 # limitations under the License.
 #
 
-include_recipe 'nodejs::nodejs'
-include_recipe 'nodejs::npm'
+change_notify = node['postgresql']['server']['config_change_notify']
 
-node['nodejs']['npm_packages'].each do |pkg|
-  f = nodejs_npm pkg['name'] do
-    action :nothing
-  end
-  pkg.each do |key, value|
-    f.send(key, value) unless key == 'name' || key == 'action'
-  end
-  action = pkg.key?('action') ? pkg['action'] : :install
-  f.action(action)
-end if node['nodejs'].key?('npm_packages')
+template "#{node['postgresql']['dir']}/postgresql.conf" do
+  source "postgresql.conf.erb"
+  owner "postgres"
+  group "postgres"
+  mode 0600
+  notifies change_notify, 'service[postgresql]', :delayed
+end
+
+template "#{node['postgresql']['dir']}/pg_hba.conf" do
+  source "pg_hba.conf.erb"
+  owner "postgres"
+  group "postgres"
+  mode 00600
+  notifies change_notify, 'service[postgresql]', :delayed
+end
