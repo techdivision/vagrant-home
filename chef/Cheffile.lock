@@ -119,7 +119,7 @@ GIT
 GIT
   remote: https://github.com/techdivision/cookbook-techdivision-base
   ref: master
-  sha: 428d95d6a81da6dab27f0ac8d3a69d057153ffd4
+  sha: dbfb322536965d5d087b075d423eb8672bafc53a
   specs:
     techdivision-base (1.0.1)
       chef-solo-search (>= 0.0.0)

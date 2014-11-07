@@ -97,7 +97,8 @@ end
 # Enable ACL support
 #
 
-techdivision_base_acl "/"
+# Disabled for now, doesn't work on all platforms
+#techdivision_base_acl "/"
 
 #
 # Vagrant support
