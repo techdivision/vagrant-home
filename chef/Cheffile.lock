@@ -157,9 +157,9 @@ GIT
 GIT
   remote: https://github.com/techdivision/cookbook-techdivision-typo3flow
   ref: master
-  sha: 955d93f8d4c5dcdd043a95285faba9203d832af9
+  sha: 02b0b5a8ab59a324d1b83ce48938e67081647105
   specs:
-    techdivision-typo3flow (1.0.1)
+    techdivision-typo3flow (1.0.2)
       database (>= 0.0.0)
       mysql (>= 0.0.0)
 
